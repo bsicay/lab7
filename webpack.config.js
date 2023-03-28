@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: {
@@ -19,6 +20,20 @@ module.exports = {
         new HtmlWebpackPlugin({
           title: 'Libreria',
           template: './src/index.html'
-        })
-      ]
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'styles.css' // Nombre del archivo CSS generado
+          })
+      ],
+      module: {
+        rules: [
+          {
+            test: /\.css$/i,
+            use: [
+              MiniCssExtractPlugin.loader, // Extrae los estilos a un archivo css separado
+              'css-loader' // Convierte los archivos CSS en un módulo de CommonJS
+            ]
+          }
+        ]
+      },
 }

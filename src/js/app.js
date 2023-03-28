@@ -5,6 +5,8 @@ import { init as initHarryPotter } from './pages/harry-potter.js';
 import { init as initHistoria} from './pages/historia.js';
 import { init as initIt} from './pages/it.js';
 import { init as initNuevos } from './pages/nuevos.js';
+import '../scss/style.css' 
+// import 'bootstrap/dist/css/bootstrap.css'
 
 const main = document.querySelector('main');
 const navLinks = document.querySelectorAll('nav a');
