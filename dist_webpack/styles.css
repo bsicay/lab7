@@ -25,6 +25,12 @@ body{
     background-color: #111;
   }
 
+.mainTitle {
+    border: none; 
+    color: white;
+    text-shadow: none;
+}
+
 h1 {
     text-align: center;
     font-size: 36px;
