@@ -1,3 +1,5 @@
+import { loadPage } from '../app.js';
+
 export function init(container) {
 
     container = document.createElement('div');

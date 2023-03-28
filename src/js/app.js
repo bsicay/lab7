@@ -1,9 +1,16 @@
+
+
+import { init as initPopulares } from './pages/populares.js';
+import { init as initHarryPotter } from './pages/harry-potter.js';
+import { init as initHistoria} from './pages/historia.js';
+import { init as initIt} from './pages/it.js';
+import { init as initNuevos } from './pages/nuevos.js';
+
 const main = document.querySelector('main');
 const navLinks = document.querySelectorAll('nav a');
-const loadedPages = {}; // objeto para llevar un registro de las páginas ya cargadas
 
 
-function loadPage(page) {
+export function loadPage(page) {
     const main = document.querySelector('main');
         main.innerHTML = ''; 
         import(`./pages/${page}.js`)
@@ -25,12 +32,10 @@ navLinks.forEach(link => {
     });
 });
 
-// export function loadPageDetail(page) {
-//     import(`./pages/${page}.js`)
-//         .then(module => {
-//             module.init(main);
-//         })
-//         .catch(error => {
-//             console.error(`Error loading ${page} module: ${error}`);
-//         });
-// }
+// Inicializar los módulos que se importaron
+initPopulares(main);
+initHarryPotter(main);
+initHistoria(main);
+initIt(main);
+initNuevos(main);
+main.innerHTML = ''
