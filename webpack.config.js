@@ -33,6 +33,11 @@ module.exports = {
               MiniCssExtractPlugin.loader, // Extrae los estilos a un archivo css separado
               'css-loader' // Convierte los archivos CSS en un módulo de CommonJS
             ]
+          }, 
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: "babel-loader"
           }
         ]
       },
