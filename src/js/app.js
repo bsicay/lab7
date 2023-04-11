@@ -35,9 +35,10 @@ navLinks.forEach(link => {
 });
 
 // Inicializar los módulos que se importaron
+
 initPopulares(main);
 initHarryPotter(main);
 initHistoria(main);
 initIt(main);
 initNuevos(main);
-main.innerHTML = ''
+main.innerHTML = '';
